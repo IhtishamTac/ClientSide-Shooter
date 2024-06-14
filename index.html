@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shooter</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gameOver" id="gameOver">
+            <h1>Game over</h1>
+            <div class="d-flex" style="margin-top: 20px; gap: 20px;">
+                <span id="usernameGameOver">Username</span>
+                <span> Score : <span id="scoreGameOver">0</span></span>
+            </div>
+            <div class="d-flex" style="margin: 20px;">
+                <button id="btnSave">Save</button>
+                <button id="btnReplay">Replay</button>
+            </div>
+        </div>
+
+        <div class="pause" id="pauseGame">
+            <h1>Pause game</h1>
+            <div class="d-flex" style="margin-top: 20px; gap: 20px;">
+                <div class="wrapper">
+                    <h4>This game is paused.</h4>
+                    <h4 style="margin-top: 10px;">Continue ?</h4>
+                </div>
+            </div>
+            <div class="d-flex" style="margin: 20px;">
+                <button id="continueBtn">Yes</button>
+            </div>
+        </div>
+
+        <div class="timerCountdown" id="timerCountdown">
+            <h1 id="textTimerCountdown">3</h1>
+        </div>
+
+
+        <div class="mainMenu" id="mainMenu">
+            <div class="wrapper">
+                <img src="media/Sprites/shooter.png" alt="icn" class="icon">
+                <div class="wrap">
+                    <p>
+                        <input type="text" class="inputName" placeholder="Input Username" id="playerName" required>
+                    </p>
+                    <select name="diff" id="diff" class="diff">
+                        <option selected disabled>Select Level</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+                <div class="gun">
+                    <label for="gun1">
+                        <img src="media/Sprites/gun1.png" alt="a">
+                        <input type="radio" name="gun" id="gun1">
+                    </label>
+                    <label for="gun2">
+                        <img src="media/Sprites/gun2.png" alt="a">
+                        <input type="radio" name="gun" id="gun2">
+                    </label>
+                </div>
+                <div class="target">
+                    <label for="target1">
+                        <img src="media/Sprites/target1.png" alt="a">
+                        <input type="radio" name="target" id="target1">
+                    </label>
+                    <label for="target2">
+                        <img src="media/Sprites/target2.png" alt="a">
+                        <input type="radio" name="target" id="target2">
+                    </label>
+                    <label for="target3">
+                        <img src="media/Sprites/target3.png" alt="a">
+                        <input type="radio" name="target" id="target3">
+                    </label>
+                </div>
+                <div class="buttons">
+                    <button class="play" id="btnPlay" disabled>Play Game</button>
+                    <button class="btnInstruction" id="btnIns">Instruction</button>
+                </div>
+            </div>
+            <div class="instruction" id="instructionBox">
+                <div class="d-flex" style="justify-content: end;">
+                    <button id="btnXIns" style="background-color: red;">X</button>
+                </div>
+                <h1>How to play game</h1>
+                <p>1. Input username</p>
+                <p>2. Username are required to click play button</p>
+                <p>3. Point the Pointer at the target</p>
+                <p>4. Click to shoot</p>
+                <p>5. Get as many point as possible</p>
+                <p>6. Easy was the default difficulty</p>
+                <p>7. Enjoy!</p>
+            </div>
+        </div>
+
+        <!-- canvas -->
+        <div class="d-flex mainContent" id="mainContent">
+            <canvas id="canvas" width="1000" height="600"
+                style="background-image: url('media/Sprites/background.jpg'); background-size: cover;"></canvas>
+            <div class="leaderboard" id="leaderboard" style="display:none;">
+                <h1>LEADERBOARD</h1>
+                <select name="sort" id="sortBy" class="sortby">
+                    <option value="score">Sort by Score</option>
+                    <option value="recent">Sort by Recent</option>
+                </select>
+                <div id="leaderboardContent" style="margin-top: 20px;"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="object/target.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

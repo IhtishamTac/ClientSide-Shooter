@@ -1,0 +1,146 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrap {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.diff {
+    margin-top: 10px;
+}
+
+label img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.mainMenu {
+    display: flex;
+    /* display: none; */
+}
+
+.mainContent {
+    position: absolute;
+    z-index: -100;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.leaderboard {
+    width: 400;
+    height: 600;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.sortby {
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.instruction {
+    margin-left: 50px;
+    width: 400px;
+    height: 550px;
+    border: 2px solid;
+    background-color: rgb(55, 55, 55);
+    border-radius: 5px;
+    color: white;
+    display: none;
+}
+
+.instruction h1 {
+    padding: 30px;
+}
+
+.instruction p {
+    padding: 10px 30px;
+}
+
+.pause {
+    position: absolute;
+    z-index: 10;
+    background-color: lightgray;
+    padding: 100px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+}
+
+.gameOver {
+    position: absolute;
+    z-index: 10;
+    background-color: lightgray;
+    padding: 100px;
+    border-radius: 10px;
+    display: none;
+}
+
+.timerCountdown{
+    position: absolute;
+    font-size: 50px;
+    background-color: rgb(119, 136, 153, 0.5);
+    padding: 1000px;
+    display: none;
+}
+.inputName{
+    width: 180px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+    padding: 0 10px;
+    border: 2px solid lightgray;
+}
+.play{
+    width: 130px;
+    height: 35px;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px;
+}
+.btnInstruction{
+    width: 130px;
+    height: 35px;
+    background-color: brown;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px;
+}
+
+.diff{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+}
